@@ -23,7 +23,7 @@ function App(props) {
   dispatch(setSetting())
   return (
     <div className="App">
-      {props.children}  
+      {props.children}
     </div>
   );
 }
