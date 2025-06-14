@@ -4,6 +4,7 @@ import DefaultLayout from "../layouts/default-layout"
 // pages
 import Index from '../views/index'
 import DashboardOne from '../views/dashboard-1';
+import Home from "../views/easyCoffee";
 import DashboardTwo from "../views/dashboard-2";
 import DashboardThree from "../views/dashboard-3";
 import DashboardFour from "../views/dashboard-4";
@@ -73,264 +74,269 @@ import EChartPage from "../views/modules/charts/eChart";
 import AmCharts from "../views/modules/charts/amChart";
 import ChartJsPage from "../views/modules/charts/chartJs";
 import PrivacySetting from "../views/modules/extra-pages/privacy-setting";
+import { path } from "@amcharts/amcharts4/core";
 export const IndexRouters = [
     {
         path: '',
-        element : <DefaultLayout />,
-        children : [
+        element: <DefaultLayout />,
+        children: [
             {
                 path: '',
-                element : <Index />,
+                element: <Index />,
             },
             {
-                path:'dashboard-1',
-                element:<DashboardOne/>
+                path: 'easy-coffee',
+                element: <Home />,
             },
             {
-                path:'dashboard-2',
-                element:<DashboardTwo/>
+                path: 'dashboard-1',
+                element: <DashboardOne />
             },
             {
-                path:'dashboard-3',
-                element:<DashboardThree/>
+                path: 'dashboard-2',
+                element: <DashboardTwo />
             },
             {
-                path:'dashboard-4',
-                element:<DashboardFour/>
+                path: 'dashboard-3',
+                element: <DashboardThree />
             },
             {
-                path:'/all-doctors',
-                element:<AllDoctors/>
+                path: 'dashboard-4',
+                element: <DashboardFour />
             },
             {
-                path:'/add-doctors',
-                element:<AddDoctors/>
+                path: '/all-doctors',
+                element: <AllDoctors />
             },
             {
-                path:'/doctors-profile',
-                element:<DoctorProfile/>
+                path: '/add-doctors',
+                element: <AddDoctors />
             },
             {
-                path:'/edit-doctors',
-                element:<EditDoctors/>
+                path: '/doctors-profile',
+                element: <DoctorProfile />
             },
             {
-                path:'/calendar',
-                element:<Calendar/>
+                path: '/edit-doctors',
+                element: <EditDoctors />
             },
             {
-                path:'/chat',
-                element:<Chat/>
+                path: '/calendar',
+                element: <Calendar />
             },
             {
-                path:'/ui-colors',
-                element:<UiColors/>
+                path: '/chat',
+                element: <Chat />
             },
             {
-                path:'/ui-typography',
-                element:<UiTypography/>
+                path: '/ui-colors',
+                element: <UiColors />
             },
             {
-                path:'/ui-alerts',
-                element:<UiAlerts/>
+                path: '/ui-typography',
+                element: <UiTypography />
             },
             {
-                path:'/ui-badges',
-                element:<UiBadges/>
+                path: '/ui-alerts',
+                element: <UiAlerts />
             },
             {
-                path:'/ui-breadcrumb',
-                element:<UiBreadcrumb/>
+                path: '/ui-badges',
+                element: <UiBadges />
             },
             {
-                path:'/ui-button',
-                element:<UiButton/>
+                path: '/ui-breadcrumb',
+                element: <UiBreadcrumb />
             },
             {
-                path:'/ui-cards',
-                element:<UiCards/>
+                path: '/ui-button',
+                element: <UiButton />
             },
             {
-                path:'/ui-carousel',
-                element:<UiCarousel/>
+                path: '/ui-cards',
+                element: <UiCards />
             },
             {
-                path:'/ui-video',
-                element:<UiVideo/>
+                path: '/ui-carousel',
+                element: <UiCarousel />
             },
             {
-                path:'/ui-grid',
-                element:<UiGrid/>
+                path: '/ui-video',
+                element: <UiVideo />
             },
             {
-                path:'/ui-image',
-                element:<UiImage/>
+                path: '/ui-grid',
+                element: <UiGrid />
             },
             {
-                path:'/ui-list-group',
-                element:<UiListGroup/>
+                path: '/ui-image',
+                element: <UiImage />
             },
             {
-                path:'/ui-media',
-                element:<UiMedia/>
+                path: '/ui-list-group',
+                element: <UiListGroup />
             },
             {
-                path:'/ui-modal',
-                element:<UiModal/>
+                path: '/ui-media',
+                element: <UiMedia />
             },
             {
-                path:'/ui-notifications',
-                element:<UiNotifications/>
+                path: '/ui-modal',
+                element: <UiModal />
             },
             {
-                path:'/ui-paginations',
-                element:<UiPaginations/>    
+                path: '/ui-notifications',
+                element: <UiNotifications />
             },
             {
-                path:'/ui-popovers',
-                element:<UiPopovers/>
+                path: '/ui-paginations',
+                element: <UiPaginations />
             },
             {
-                path:'/ui-progressbar',
-                element:<UiProgressbar/>
+                path: '/ui-popovers',
+                element: <UiPopovers />
             },
             {
-                path:'/ui-tabs',
-                element:<UiTabs />
+                path: '/ui-progressbar',
+                element: <UiProgressbar />
             },
             {
-                path:'/ui-tooltips',
-                element:<UiTooltips/>
+                path: '/ui-tabs',
+                element: <UiTabs />
+            },
+            {
+                path: '/ui-tooltips',
+                element: <UiTooltips />
             },
             // Forms
             {
-                path:'/form-elements',
-                element:<FormElements/>
+                path: '/form-elements',
+                element: <FormElements />
             },
             {
-                path:'/form-validation',
-                element:<FormValidation/>
+                path: '/form-validation',
+                element: <FormValidation />
             },
             {
-                path:'/form-switch',
-                element:<FormSwitch/>
+                path: '/form-switch',
+                element: <FormSwitch />
             },
             {
-                path:'/form-Checkbox',
-                element:<FormCheckbox/>
+                path: '/form-Checkbox',
+                element: <FormCheckbox />
             },
             {
-                path:'/form-radio',
-                element:<FormRadio/>
+                path: '/form-radio',
+                element: <FormRadio />
             },
             // Form Wizard
             {
-                path:'/simple-wizard',
-                element:<SimpleWizard/>
+                path: '/simple-wizard',
+                element: <SimpleWizard />
             },
             {
-                path:'/validate-wizard',
-                element:<ValidateWizard/>
+                path: '/validate-wizard',
+                element: <ValidateWizard />
             },
             {
-                path:'/vertical-wizard',
-                element:<VerticalWizard/>
+                path: '/vertical-wizard',
+                element: <VerticalWizard />
             },
             // Table
             {
-                path:'/basic-table',
-                element:<BasicTable/>
+                path: '/basic-table',
+                element: <BasicTable />
             },
             {
-                path:'/data-table',
-                element:<DataTable/>
+                path: '/data-table',
+                element: <DataTable />
             },
             {
-                path:'/editable-table',
-                element:<EditableTable/>
+                path: '/editable-table',
+                element: <EditableTable />
             },
             // Extra Pages
             {
-                path:'/timeline',
-                element:<Timeline/>
+                path: '/timeline',
+                element: <Timeline />
             },
             {
-                path:'/invoice',
-                element:<Invoice/>
+                path: '/invoice',
+                element: <Invoice />
             },
             {
-                path:'/blank-page',
-                element:<BlankPage/>
+                path: '/blank-page',
+                element: <BlankPage />
             },
             {
-                path:'/pricing',
-                element:<Pricing/>
+                path: '/pricing',
+                element: <Pricing />
             },
             {
-                path:'/pricing-1',
-                element:<PricingOne/>
+                path: '/pricing-1',
+                element: <PricingOne />
             },
             {
-                path:'/faq',
-                element:<Faq/>
+                path: '/faq',
+                element: <Faq />
             },
             {
-                path:'/account-setting',
-                element:<AccountSetting/>
+                path: '/account-setting',
+                element: <AccountSetting />
             },
             {
-                path:'/privacy-setting',
-                element:<PrivacySetting/>
+                path: '/privacy-setting',
+                element: <PrivacySetting />
             },
             // Maps
             {
-                path:'/google-map',
-                element:<Google/>
+                path: '/google-map',
+                element: <Google />
             },
             {
-                path:'/vector-map',
-                element:<VectorMap/>
+                path: '/vector-map',
+                element: <VectorMap />
             },
             // Charts
             {
-                path:'/chartjs',
-                element:<ChartJsPage/>
+                path: '/chartjs',
+                element: <ChartJsPage />
             },
-            
+
             {
-                path:'/e-chart',
-                element:<EChartPage/>
-            },
-            {
-                path:'/am-chart',
-                element:<AmCharts/>
+                path: '/e-chart',
+                element: <EChartPage />
             },
             {
-                path:'/apex-chart',
-                element:<ApexChartPage/>
+                path: '/am-chart',
+                element: <AmCharts />
+            },
+            {
+                path: '/apex-chart',
+                element: <ApexChartPage />
             },
             // Icons
             {
-                path:'dripicons',
-                element:<Dripicons/>
+                path: 'dripicons',
+                element: <Dripicons />
             },
             {
-                path:'/font-awesome',
-                element:<FontAwesomeIcons/>
+                path: '/font-awesome',
+                element: <FontAwesomeIcons />
             },
             {
-                path:'/line-awesome',
-                element:<LineAwesomeIcons/>
+                path: '/line-awesome',
+                element: <LineAwesomeIcons />
             },
             {
-                path:'/remixicon',
-                element:<RemixIconPage/>
+                path: '/remixicon',
+                element: <RemixIconPage />
             },
             {
-                path:'/unicons',
-                element:<UnIconsPage/>
+                path: '/unicons',
+                element: <UnIconsPage />
             },
-            
+
             ...AppRouter
         ],
     }
