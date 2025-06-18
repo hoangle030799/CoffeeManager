@@ -471,6 +471,12 @@ a:hover {
   padding: 0;
 }
 
+.bold {
+  color: #3f414d;
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .iq-list-style-1 li {
   display: inline-block;
   float: left;

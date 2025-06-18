@@ -1194,7 +1194,14 @@ Card
   padding: 20px;
 }
 
-.iq-card .iq-card-header {
+.dancing-script {
+  font-family: 'Dancing Script', cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: initial;
+}
+
+.iq-card .iq-card-header .iq-card-footer {
   padding: 0 20px;
   min-height: 60px;
   -ms-flex-align: center !important;

@@ -323,52 +323,97 @@ const Home = () => {
             <div className="iq-card">
               <div className="iq-card-header d-flex justify-content-center align-items-center">
                 <div className="iq-header-title">
-                  <h2 className="card-title">Giới thiệu</h2>
+                  <h2 className="card-title">
+                    Easy Coffee Manager
+                  </h2>
                 </div>
               </div>
               <div className="iq-card-body">
                 <div className="d-flex mb-4 gap-3">
                   <div className="media-body">
-                    <h5 className="mt-0">Mục tiêu</h5>
                     <p className="mb-0">
-                      Regularly and thoroughly clean your hands with an
-                      alcohol-based hand rub or wash them with soap and water.
-                    </p>
-                  </div>
-                </div>
-                <div className="d-flex mb-4 gap-3">
-                  <div className="media-body">
-                    <h5 className="mt-0">Sứ mệnh</h5>
-                    <p className="mb-0">
-                      Maintain at least 1 metre (3 feet) distance between
-                      yourself and anyone who is coughing or sneezing.
+                      <span className="bold">Easy Coffee Manager</span>
+                      <span className="text-dark-emphasis">
+                        - một nền tảng website được thiết kế dành riêng cho những người đang bắt đầu những bước đầu tiên trong hành trình khởi nghiệp với mô hình quán cà phê mang đi (takeaway). Chúng tôi hiểu rằng bắt đầu một hành trình kinh doanh không hề đơn giản – đặc biệt khi bạn chưa có kinh nghiệm quản lý, nguồn vốn hạn chế hoặc chưa biết nên bắt đầu từ đâu.</span>
                     </p>
                   </div>
                 </div>
                 <div className="d-flex mb-4 gap-3">
                   <div className="media-body">
                     <h5 className="mt-0">
-                      Avoid touching eyes, nose and mouth
+                      <i class="ri-bard-fill"></i>Mục tiêu
+                    </h5>
+                    <p className="mb-0 text-dark-emphasis">
+                      Với mục tiêu giúp người mới tiết kiệm thời gian,
+                      chi phí và công sức, Easy Coffee Manager mang đến một giao diện
+                      đơn giản – dễ dùng – dễ áp dụng, giúp bạn từng bước xây dựng và vận hành quán một cách hiệu quả.
+                    </p>
+                  </div>
+                </div>
+                <div className="d-flex mb-4 gap-3">
+                  <div className="media-body">
+                    <h5 className="mt-0">
+                      <i class="ri-bard-fill"></i>Những gì mà Easy Coffee Manager mang đến cho bạn:
+                    </h5>
+                    <ul className="mb-0 text-body">
+                      <li>
+                        <strong>Những điều cần lưu ý trước khi bắt đầu:</strong>
+                        &nbsp;Lưu ý quan trọng giúp bạn chuẩn bị kỹ lưỡng và tránh sai lầm phổ biến.
+                      </li>
+                    </ul>
+                    <ul className="mb-0 text-body">
+                      <li>
+                        <strong>Thiết lập menu & Gợi ý cách định giá sản phẩm:</strong>
+                        &nbsp;Tạo menu mẫu dành cho người mới, dễ dàng chỉnh sửa. Gợi ý cách định giá sản phẩm hợp lý.
+                      </li>
+                    </ul>
+                    <ul className="mb-0 text-body">
+                      <li>
+                        <strong>Quản lý kho nguyên liệu:</strong>
+                        &nbsp;Tạo hóa đơn nhanh chóng qua pop-up. Hệ thống tự động tính tổng và ghi nhận vào báo cáo doanh thu.
+                      </li>
+                    </ul>
+                    <ul className="mb-0 text-body">
+                      <li>
+                        <strong>Thêm đơn bán hàng:</strong>
+                        &nbsp;Nhanh chóng tạo hoá đơn bán hàng, hệ thống sẽ ghi nhận và cập nhật vào báo cáo doanh thu chi tiết.
+                      </li>
+                    </ul>
+                    <ul className="mb-0 text-body">
+                      <li>
+                        <strong>Kiểm soát tài chính:</strong>
+                        &nbsp;Ghi chép thu – chi, hỗ trợ người dùng có thể nắm được báo cáo doanh thu theo ngày hoặc tháng.
+                      </li>
+                    </ul>
+                    <ul className="mb-0 text-body">
+                      <li>
+                        <strong>Gợi ý chiến lược marketing cơ bản:</strong>
+                        &nbsp;Ý tưởng truyền thông đơn giản, hiệu quả, phù hợp với mô hình quán nhỏ.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="d-flex mb-4 gap-3">
+                  <div className="media-body">
+                    <h5 className="mt-0">
+                      <i class="ri-bard-fill"></i>Sứ mệnh
                     </h5>
                     <p className="mb-0">
-                      Hands touch many surfaces and can pick up viruses. Once
-                      contaminated, hands can transfer the virus to your eyes,
-                      nose or mouth. From there, the virus can enter your body
-                      and can make you sick.
+                      <span className="text-dark-emphasis">Sứ mệnh của chúng tôi là </span>
+                      <span className="bold">đơn giản hóa việc khởi nghiệp với mô hình quán cà phê mang đi</span>
+                      <span className="text-dark-emphasis"> cho tất cả mọi người – dù bạn là sinh viên,
+                        nhân viên văn phòng hay người đang ấp ủ giấc mơ kinh doanh.
+                        Easy Coffee Manager không chỉ cung cấp công cụ, mà còn là người bạn đồng hành,
+                        cùng bạn hiện thực hóa giấc mơ kinh doanh một cách tự tin và vững chắc.
+                      </span>
                     </p>
                   </div>
                 </div>
-                <div className="d-flex gap-3">
-                  <div className="media-body">
-                    <h5 className="mt-0">Practice respiratory hygiene </h5>
-                    <p className="mb-0">
-                      Make sure you, and the people around you, follow good
-                      respiratory hygiene. This means covering your mouth and
-                      nose with your bent elbow or tissue when you cough or
-                      sneeze. Then dispose of the used tissue immediately.
-                    </p>
-                  </div>
-                </div>
+              </div>
+              <div className="iq-card-footer d-flex justify-content-center align-items-center">
+                <p className="dancing-script text-body">
+                  Easy Coffee Manager – Khởi đầu dễ dàng trong hành trình vận hành quán cà phê của riêng bạn.
+                </p>
               </div>
             </div>
           </Col>
