@@ -5,6 +5,7 @@ import DefaultLayout from "../layouts/default-layout"
 import Index from '../views/index'
 import DashboardOne from '../views/dashboard-1';
 import Home from "../views/easyCoffee";
+import Menu from "../views/menu";
 import DashboardTwo from "../views/dashboard-2";
 import DashboardThree from "../views/dashboard-3";
 import DashboardFour from "../views/dashboard-4";
@@ -87,6 +88,10 @@ export const IndexRouters = [
             {
                 path: 'easy-coffee',
                 element: <Home />,
+            },
+            {
+                path: 'menu',
+                element: <Menu />,
             },
             {
                 path: 'dashboard-1',

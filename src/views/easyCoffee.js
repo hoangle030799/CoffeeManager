@@ -1,319 +1,76 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import { Col, Dropdown, Row, Table, Tab, Nav } from "react-bootstrap";
-// Chart
-import Chart from "react-apexcharts";
-
-// Img
-import user from "../assets/images/user/04.jpg"
-import user1 from "../assets/images/user/05.jpg";
-import user2 from "../assets/images/user/06.jpg";
-import user3 from "../assets/images/user/07.jpg";
-import user4 from "../assets/images/user/08.jpg";
-import user5 from "../assets/images/user/09.jpg";
-import user6 from "../assets/images/user/10.jpg";
-import user7 from "../assets/images/user/01.jpg";
-import user8 from "../assets/images/user/02.jpg";
-import user9 from "../assets/images/user/03.jpg";
-import user10 from "../assets/images/page-img/30.png";
-import user11 from "../assets/images/page-img/31.png";
-import user12 from "../assets/images/page-img/32.png";
-import user13 from "../assets/images/page-img/33.png";
-// Swiper
-import { Swiper, SwiperSlide } from "swiper/react";
-// Swiper modules
-import { Navigation } from "swiper/modules";
-
-// Swiper css
+import { useNavigate } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
-
-//Link
 import { Link } from "react-router-dom";
+import Menu from "./menu";
+import { use } from "echarts";
 
 const Home = () => {
-  const chart1 = {
-    options: {
-      chart: {
-        type: "bar",
-        height: 350,
-      },
-      plotOptions: {
-        bar: {
-          colors: {
-            ranges: [
-              {
-                from: -100,
-                to: -46,
-                color: "#e64141",
-              },
-              {
-                from: -45,
-                to: 0,
-                color: "#089bab",
-              },
-              {
-                from: 0,
-                to: 20,
-                color: "#FC9F5B",
-              },
-            ],
-          },
-          columnWidth: "80%",
-        },
-      },
-      dataLabels: {
-        enabled: false,
-      },
-      yaxis: {
-        title: {
-          text: "Growth",
-        },
-        labels: {
-          formatter: function (y) {
-            return y.toFixed(0) + "%";
-          },
-        },
-      },
-      xaxis: {
-        type: "datetime",
-        categories: [
-          "2011-01-01",
-          "2011-02-01",
-          "2011-03-01",
-          "2011-04-01",
-          "2011-05-01",
-          "2011-06-01",
-          "2011-07-01",
-          "2011-08-01",
-          "2011-09-01",
-          "2011-10-01",
-          "2011-11-01",
-          "2011-12-01",
-          "2012-01-01",
-          "2012-02-01",
-          "2012-03-01",
-          "2012-04-01",
-          "2012-05-01",
-          "2012-06-01",
-          "2012-07-01",
-          "2012-08-01",
-          "2012-09-01",
-          "2012-10-01",
-          "2012-11-01",
-          "2012-12-01",
-          "2013-01-01",
-          "2013-02-01",
-          "2013-03-01",
-          "2013-04-01",
-          "2013-05-01",
-          "2013-06-01",
-          "2013-07-01",
-          "2013-08-01",
-          "2013-09-01",
-        ],
-        labels: {
-          rotate: -90,
-        },
-      },
+
+  const navigate = useNavigate();
+  const [tab, setTab] = useState("1");
+  const [menuDraft, setMenuDraft] = useState("");
+  const [khuVuc, setKhuVuc] = useState("");
+  const menuData = {
+    "nông thôn": {
+      Hot: [
+        { name: "Đen đá", price: "13k" },
+        { name: "Nâu", price: "15k" },
+        { name: "Bạc xỉu", price: "18k" },
+      ],
+      Cold: [
+        { name: "Đen đá", price: "13k" },
+        { name: "Nâu", price: "15k" },
+        { name: "Bạc xỉu", price: "18k" },
+        { name: "Cà phê ủ lạnh", price: "25k" },
+      ],
     },
-    series: [
-      {
-        name: "Cash Flow",
-        data: [
-          1.45, 5.42, 5.9, -0.42, -12.6, -18.1, -18.2, -14.16, -11.1, -6.09,
-          0.34, 3.88, 13.07, 5.8, 2, 7.37, 8.1, 13.57, 15.75, 17.1, 19.8,
-          -27.03, -54.4, -47.2, -43.3, -18.6, -48.6, -41.1, -39.6, -37.6, -29.4,
-          -21.4, -2.4,
-        ],
-      },
-    ],
+    "thành thị": {
+      Hot: [
+        { name: "Đen đá", price: "18k" },
+        { name: "Nâu", price: "20k" },
+        { name: "Bạc xỉu", price: "25k" },
+      ],
+      Cold: [
+        { name: "Đen đá", price: "18k" },
+        { name: "Nâu", price: "20k" },
+        { name: "Bạc xỉu", price: "25k" },
+        { name: "Cà phê ủ lạnh", price: "30k" },
+      ],
+    },
   };
-  const chart2 = {
-    options: {
-      chart: {
-        height: 150,
-        type: "area",
-        animations: {
-          enabled: true,
-          easing: "linear",
-          dynamicAnimation: {
-            speed: 1000,
-          },
-        },
-        toolbar: {
-          show: false,
-        },
-        sparkline: {
-          enabled: true,
-        },
-        group: "sparklines",
-      },
-      colors: ["#0D9AAA"],
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: "straight",
-        width: 3,
-      },
-      markers: {
-        size: 4,
-      },
-      yaxis: {
-        max: 100,
-      },
-      fill: {
-        type: 'gradient',
-        gradient: {
-          shadeIntensity: 1,
-          inverseColors: false,
-          opacityFrom: 0.5,
-          opacityTo: 0,
-          stops: [0, 90, 100]
-        },
-      },
-      legend: {
-        show: false,
-      },
-    },
-    series: [
-      {
-        data: [80, 90, 60, 90, 44, 50, 98, 80, 90],
-      },
-    ],
-  }
-  const chart3 = {
-    options: {
-      chart: {
-        height: 150,
-        type: "area",
-        animations: {
-          enabled: true,
-          easing: "linear",
-          dynamicAnimation: {
-            speed: 1000,
-          },
-        },
-        toolbar: {
-          show: false,
-        },
-        sparkline: {
-          enabled: true,
-        },
-        group: "sparklines",
-      },
-      colors: ["#fc9f5b"],
-      dataLabels: {
-        enabled: false,
-      },
-      stroke: {
-        curve: "straight",
-        width: 3,
-      },
-      markers: {
-        size: 4,
-      },
-      yaxis: {
-        max: 100,
-      },
-      fill: {
-        type: "gradient",
-        gradient: {
-          shadeIntensity: 1,
-          inverseColors: false,
-          opacityFrom: 0.5,
-          opacityTo: 0,
-          stops: [0, 90, 100],
-        },
-      },
-      legend: {
-        show: false,
-      }
-    },
-    series: [
-      {
-        data: [50, 60, 45, 90, 44, 50, 98, 75, 50],
-      },
-    ],
-  }
-  const chart4 = {
-    options: {
-      chart: {
-        height: 290,
-        type: 'radialBar',
-      },
-      plotOptions: {
-        radialBar: {
-          dataLabels: {
-            name: {
-              fontSize: '22px',
-            },
-            value: {
-              fontSize: '16px',
-            },
-            total: {
-              show: true,
-              label: 'Total',
-              formatter: function () {
-                // By default this function returns the average of all series. The below is just an example to show the use of custom formatter function
-                return 249
-              }
-            }
-          },
-          track: {
-            background: ['#089bab', '#FC9F5B', '#75DDDD', '#ffb57e']
-          }
-        }
-      },
-    },
-    series: [44, 55, 67, 83],
-    labels: ['Apples', 'Oranges', 'Bananas', 'Berries'],
-    colors: ['#089bab', '#FC9F5B', '#75DDDD', '#ffb57e'],
-  }
-  const HospitalStaff = [
-    {
-      id: 1,
-      staffImage: user1,
-      drName: "Dr. Paul Molive",
-      position: "Doctor",
-      description: "California Hospital Medical Center",
-    },
-    {
-      id: 2,
-      staffImage: user2,
-      drName: "Dr. Paul Molive",
-      position: "Nurse",
-      description: "California Hospital Medical Center",
-    },
-    {
-      id: 3,
-      staffImage: user3,
-      drName: "Dr. Paul Molive",
-      position: "Surgeon",
-      description: "California Hospital Medical Center",
-    },
-    {
-      id: 4,
-      staffImage: user4,
-      drName: "Dr. Paul Molive",
-      position: "Doctor",
-      description: "California Hospital Medical Center",
-    },
-    {
-      id: 5,
-      staffImage: user5,
-      drName: "Dr. Paul Molive",
-      position: "Surgeon",
-      description: "California Hospital Medical Center",
-    },
-    {
-      id: 6,
-      staffImage: user6,
-      drName: "Dr. Paul Molive",
-      position: "OT Assistent",
-      description: "California Hospital Medical Center",
-    },
-  ];
+  const handleChonKhuVuc = (loai) => {
+    setKhuVuc(loai);
+    setMenuDraft(menuData[loai]);
+  };
+  const handleSubmit = () => {
+    if (menuDraft) {
+      navigate("/menu", { state: { menu: menuDraft } });
+    }
+  };
+  const renderMenu = (menu) => (
+    <>
+      {Object.entries(menu).map(([loai, items]) => (
+        <div key={loai} className="mb-4">
+          <h6 className="fw-bold">{loai}</h6>
+          <ul className="list-unstyled">
+            {items.map((item, index) => (
+              <li
+                key={index}
+                className="d-flex justify-content-between border-bottom py-1"
+                style={{ maxWidth: "350px" }}
+              >
+                <span>{item.name}</span>
+                <span>{item.price}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </>
+  );
 
   return (
     <Fragment>
@@ -446,7 +203,8 @@ const Home = () => {
                           className="custom-control-label"
                           htmlFor="customCheck10"
                         >
-                          Get the address of customer
+                          <p className="bold">Xác định rõ đối tượng khách hàng mục tiêu</p>
+                          Đối tượng khách hàng bạn muốn tập trung là ai? Học sinh – sinh viên, dân văn phòng, người đi đường...? Việc xác định đúng khách hàng sẽ quyết định menu, phong cách phục vụ và vị trí đặt quán.
                         </label>
                       </div>
                     </div>
@@ -464,7 +222,9 @@ const Home = () => {
                           className="custom-control-label"
                           htmlFor="customCheck12"
                         >
-                          Contact Vendor for parcel
+                          <p className="bold">Chọn mô hình kinh doanh phù hợp</p>
+                          Chọn mô hình kinh doanh phù hợp <span className="text-body"> xe đẩy đơn giản, quầy bán nhỏ</span>
+                          ,hay một <span className="text-body">gian hàng cố định</span>. Mỗi mô hình đều có ưu – nhược điểm riêng cần cân nhắc.
                         </label>
                       </div>
                     </div>
@@ -482,7 +242,11 @@ const Home = () => {
                           className="custom-control-label"
                           htmlFor="customCheck13"
                         >
-                          Refule delivery truck
+                          <p className="bold">Khảo sát & chọn địa điểm chiến lược</p>
+                          Nên chọn khu vực có<span className="text-body"> lưu lượng người qua lại ổn định</span>,
+                          như gần trường học, văn phòng, khu dân cư...
+                          Việc xác định<span className="text-body"> thành phố hay nông thôn </span>
+                          cũng ảnh hưởng đến cách định giá và thiết kế menu.
                         </label>
                       </div>
                     </div>
@@ -500,7 +264,9 @@ const Home = () => {
                           className="custom-control-label"
                           htmlFor="customCheck14"
                         >
-                          Pick up for order no. 334
+                          <p className="bold">Lập kế hoạch tài chính ban đầu</p>
+                          Ước tính chi phí đầu tư ban đầu: xe/quầy, nguyên liệu, máy móc, ly – nắp – ống hút, marketing,…
+                          và chuẩn bị một khoản dự phòng tối thiểu.
                         </label>
                       </div>
                     </div>
@@ -518,7 +284,9 @@ const Home = () => {
                           className="custom-control-label"
                           htmlFor="customCheck15"
                         >
-                          Pay taxes for every bill
+                          <p className="bold">Lên menu phù hợp với đối tượng và địa điểm</p>
+                          Chọn số lượng sản phẩm vừa phải, dễ thực hiện, nguyên liệu linh hoạt.
+                          Đồ uống nên đáp ứng khẩu vị phổ biến tại khu vực bạn bán.
                         </label>
                       </div>
                     </div>
@@ -536,7 +304,8 @@ const Home = () => {
                           className="custom-control-label"
                           htmlFor="customCheck16"
                         >
-                          I am designers &amp; I have no life
+                          <p className="bold">Định giá sản phẩm hợp lý</p>
+                          Cân đối giữa chi phí nguyên liệu, chi phí vận hành và mức giá mà khách hàng mục tiêu sẵn sàng chi trả.
                         </label>
                       </div>
                     </div>
@@ -554,7 +323,9 @@ const Home = () => {
                           className="custom-control-label"
                           htmlFor="customCheck17"
                         >
-                          This is a good product. Buy it{" "}
+                          <p className="bold">Chuẩn bị quy trình vận hành cơ bản</p>
+                          Bao gồm quy trình pha chế, vệ sinh dụng cụ, tiếp nhận đơn hàng, đóng gói và giao hàng (nếu có).
+                          Điều này giúp đảm bảo chất lượng và tiết kiệm thời gian.
                         </label>
                       </div>
                     </div>
@@ -572,55 +343,24 @@ const Home = () => {
               </div>
             </div>
             <div className="iq-card-body">
-              <div className="table-responsive">
-                <Table className="mb-0" borderless>
-                  <thead>
-                    <tr>
-                      <th scope="col">Patient</th>
-                      <th scope="col">Doctor</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Petey Cruiser</td>
-                      <td>Dr.Monty Carlo</td>
-                    </tr>
-                    <tr>
-                      <td>Anna Sthesia</td>
-                      <td>Dr.Pete Sariya</td>
-                    </tr>
-                    <tr>
-                      <td>Paul Molive</td>
-                      <td>Dr.Brock Lee</td>
-                    </tr>
-                    <tr>
-                      <td>Anna Mull</td>
-                      <td>Dr.Barb Ackue</td>
-                    </tr>
-                    <tr>
-                      <td>Paige Turner</td>
-                      <td>Dr.Walter Melon</td>
-                    </tr>
-                    <tr>
-                      <td>Don Stairs</td>
-                      <td>Dr.Arty Ficial</td>
-                    </tr>
-                    <tr>
-                      <td>Pat Agonia</td>
-                      <td>Dr.Barb Ackue</td>
-                    </tr>
-                  </tbody>
-                </Table>
+              <div>
+                <h5>Bạn đang bán ở đâu?</h5>
+                <button className="btn btn-secondary me-3" onClick={() => handleChonKhuVuc("nông thôn")}>
+                  Nông thôn
+                </button>
+                <button className="btn btn-secondary" onClick={() => handleChonKhuVuc("thành thị")}>
+                  Thành thị
+                </button>
+
+                {menuDraft && (
+                  <>
+                    <div className="mt-4">{renderMenu(menuDraft)}</div>
+                    <button className="btn btn-primary" onClick={handleSubmit}>
+                      Submit menu
+                    </button>
+                  </>
+                )}
               </div>
-            </div>
-            <div className="card-title text-end m-3">
-              <button
-                type="button"
-                className="btn btn-primary m-3"
-                name="button"
-              >
-                Submit
-              </button>
             </div>
           </div>
         </Col>
