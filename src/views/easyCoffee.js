@@ -16,28 +16,28 @@ const Home = () => {
   const menuData = {
     "nông thôn": {
       Hot: [
-        { name: "Đen đá", price: "13k" },
-        { name: "Nâu", price: "15k" },
-        { name: "Bạc xỉu", price: "18k" },
+        { name: "Đen đá", price: "13000" },
+        { name: "Nâu", price: "15000" },
+        { name: "Bạc xỉu", price: "18000" },
       ],
       Cold: [
-        { name: "Đen đá", price: "13k" },
-        { name: "Nâu", price: "15k" },
-        { name: "Bạc xỉu", price: "18k" },
-        { name: "Cà phê ủ lạnh", price: "25k" },
+        { name: "Đen đá", price: "13000" },
+        { name: "Nâu", price: "15000" },
+        { name: "Bạc xỉu", price: "18000" },
+        { name: "Cà phê ủ lạnh", price: "25000" },
       ],
     },
     "thành thị": {
       Hot: [
-        { name: "Đen đá", price: "18k" },
-        { name: "Nâu", price: "20k" },
-        { name: "Bạc xỉu", price: "25k" },
+        { name: "Đen đá", price: "18000" },
+        { name: "Nâu", price: "20000" },
+        { name: "Bạc xỉu", price: "25000" },
       ],
       Cold: [
-        { name: "Đen đá", price: "18k" },
-        { name: "Nâu", price: "20k" },
-        { name: "Bạc xỉu", price: "25k" },
-        { name: "Cà phê ủ lạnh", price: "30k" },
+        { name: "Đen đá", price: "18000" },
+        { name: "Nâu", price: "20000" },
+        { name: "Bạc xỉu", price: "25000" },
+        { name: "Cà phê ủ lạnh", price: "30000" },
       ],
     },
   };
@@ -47,9 +47,15 @@ const Home = () => {
   };
   const handleSubmit = () => {
     if (menuDraft) {
-      navigate("/menu", { state: { menu: menuDraft } });
+      localStorage.setItem("menuFinal", JSON.stringify(menuDraft));
+      alert("Menu đã được lưu! Bạn có thể chuyển sang trang Menu để xem.");
     }
   };
+  const handleClear = () => {
+    localStorage.removeItem("menuFinal");
+    alert("Menu đã được để trống. Mời bạn chuyển sang trang Menu để tự tạo.");
+  };
+
   const renderMenu = (menu) => (
     <>
       {Object.entries(menu).map(([loai, items]) => (
@@ -339,25 +345,37 @@ const Home = () => {
           <div className="iq-card">
             <div className="iq-card-header d-flex justify-content-center align-items-center">
               <div className="iq-header-title">
-                <h2 className="card-title">Menu</h2>
-              </div>
-            </div>
-            <div className="iq-card-body">
-              <div>
-                <h5>Bạn đang bán ở đâu?</h5>
+                <h2
+                  className="card-title"
+                  style={{ paddingLeft: "60px" }}
+                >Menu</h2>
+                <h5 style={{ paddingLeft: "12px" }}>Bạn đang bán ở đâu?</h5>
                 <button className="btn btn-secondary me-3" onClick={() => handleChonKhuVuc("nông thôn")}>
                   Nông thôn
                 </button>
                 <button className="btn btn-secondary" onClick={() => handleChonKhuVuc("thành thị")}>
                   Thành thị
                 </button>
-
+              </div>
+            </div>
+            <div className="iq-card-body">
+              <div>
                 {menuDraft && (
                   <>
-                    <div className="mt-4">{renderMenu(menuDraft)}</div>
-                    <button className="btn btn-primary" onClick={handleSubmit}>
-                      Submit menu
-                    </button>
+                    <div
+                      className="mt-4 mb-4"
+                      style={{ paddingLeft: "111px" }}
+                    >
+                      {renderMenu(menuDraft)}
+                    </div>
+                    <div div className="mt-3 d-flex gap-2 justify-content-center">
+                      <button className="btn btn-primary" onClick={handleSubmit}>
+                        Submit menu
+                      </button>
+                      <button onClick={handleClear} className="btn btn-outline-secondary">
+                        Để trống và tự tạo menu
+                      </button>
+                    </div>
                   </>
                 )}
               </div>
