@@ -1,7 +1,5 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 import { Col, Row, Modal, Button, Form } from "react-bootstrap";
-import { Navigation } from "swiper/modules";
 
 // Swiper css
 import "swiper/css";

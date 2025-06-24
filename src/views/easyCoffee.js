@@ -1,16 +1,10 @@
 import React, { Fragment, useState } from "react";
-import { Col, Dropdown, Row, Table, Tab, Nav } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Col, Row, Tab } from "react-bootstrap";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Link } from "react-router-dom";
-import Menu from "./menu";
-import { use } from "echarts";
 
 const Home = () => {
 
-  const navigate = useNavigate();
-  const [tab, setTab] = useState("1");
   const [menuDraft, setMenuDraft] = useState("");
   const [khuVuc, setKhuVuc] = useState("");
   const menuData = {
