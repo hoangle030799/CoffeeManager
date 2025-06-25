@@ -5,9 +5,6 @@ import { Col, Row, Modal, Button, Form, Table } from "react-bootstrap";
 import "swiper/css";
 import "swiper/css/pagination";
 
-//Link
-import { Link } from "react-router-dom";
-
 const Inventory = () => {
 
   const [ingredients, setIngredients] = useState(() => {
@@ -24,7 +21,7 @@ const Inventory = () => {
   const [modalData, setModalData] = useState({ type: "ingredient", name: "", quantity: "", unit: "", expiry: "", cost: "" });
   const [selectedName, setSelectedName] = useState("");
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
-  const [deleteTarget, setDeleteTarget] = useState(null); // { type: 'ingredient' | 'tool', name: string }
+  const [deleteTarget, setDeleteTarget] = useState(null);
 
 
   useEffect(() => {
@@ -63,7 +60,6 @@ const Inventory = () => {
     let updatedList;
 
     if (existingItem) {
-      // Áp dụng cộng cost đơn giản
       const newCost = existingItem.cost + Number(modalData.cost);
 
       updatedList = getItemList().map(item => {

@@ -5,9 +5,6 @@ import { Col, Row, Modal, Button, Form } from "react-bootstrap";
 import "swiper/css";
 import "swiper/css/pagination";
 
-//Link
-import { Link } from "react-router-dom";
-
 const Menu = () => {
 
   const [menu, setMenu] = useState("");
