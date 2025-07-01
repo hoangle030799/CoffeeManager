@@ -14,6 +14,7 @@ const FloatingSellButton = () => {
     }, []);
 
     const handleOpen = () => setShow(true);
+
     const handleClose = () => {
         setShow(false);
         setSelectedItem("");
@@ -27,13 +28,13 @@ const FloatingSellButton = () => {
 
         let found = null;
         for (const list of Object.values(menu)) {
-            const item = list.find(i => i.name === value);
+            const item = list.find((i) => i.name === value);
             if (item) {
                 found = item;
                 break;
             }
         }
-        if (found) setPrice(found.price);
+        if (found) setPrice(Number(found.price));
     };
 
     const handleSubmit = () => {
@@ -43,12 +44,19 @@ const FloatingSellButton = () => {
         }
 
         const total = price * quantity;
+
         const newSale = {
-            name: selectedItem,
-            quantity: Number(quantity),
-            price: Number(price),
+            id: Date.now(), // ID duy nhất
+            timestamp: new Date().toISOString(), // ngày giờ chuẩn ISO
+            items: [
+                {
+                    name: selectedItem,
+                    quantity: Number(quantity),
+                    price: Number(price),
+                    total: total,
+                },
+            ],
             total,
-            timestamp: new Date().toISOString()
         };
 
         const logs = JSON.parse(localStorage.getItem("salesLogs")) || [];
@@ -66,7 +74,7 @@ const FloatingSellButton = () => {
                     position: "fixed",
                     bottom: "20px",
                     right: "20px",
-                    zIndex: 9999
+                    zIndex: 9999,
                 }}
             >
                 <Button variant="success" onClick={handleOpen}>
@@ -105,14 +113,19 @@ const FloatingSellButton = () => {
 
                     {selectedItem && (
                         <p>
-                            Giá mỗi món: <strong>{price.toLocaleString()}đ</strong><br />
+                            Giá mỗi món: <strong>{price.toLocaleString()}đ</strong>
+                            <br />
                             Tổng tiền: <strong>{(price * quantity).toLocaleString()}đ</strong>
                         </p>
                     )}
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={handleClose}>Hủy</Button>
-                    <Button variant="primary" onClick={handleSubmit}>Xác nhận bán</Button>
+                    <Button variant="secondary" onClick={handleClose}>
+                        Hủy
+                    </Button>
+                    <Button variant="primary" onClick={handleSubmit}>
+                        Xác nhận bán
+                    </Button>
                 </Modal.Footer>
             </Modal>
         </>

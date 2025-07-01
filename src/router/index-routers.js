@@ -7,6 +7,7 @@ import DashboardOne from '../views/dashboard-1';
 import Home from "../views/easyCoffee";
 import Menu from "../views/menu";
 import Inventory from "../views/inventory";
+import Revenue from "../views/revenue";
 
 import DashboardTwo from "../views/dashboard-2";
 import DashboardThree from "../views/dashboard-3";
@@ -98,6 +99,10 @@ export const IndexRouters = [
             {
                 path: 'inventory',
                 element: <Inventory />,
+            },
+            {
+                path: 'revenue',
+                element: <Revenue />,
             },
             {
                 path: 'dashboard-1',

@@ -1,0 +1,1809 @@
+[
+  {
+    "id": 1748743306,
+    "timestamp": "2025-06-01T06:04:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1748742056,
+    "timestamp": "2025-06-01T07:19:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1748743558,
+    "timestamp": "2025-06-01T08:27:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1748740055,
+    "timestamp": "2025-06-01T17:44:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1748742257,
+    "timestamp": "2025-06-01T08:16:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1748745438,
+    "timestamp": "2025-06-01T13:51:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1748828736,
+    "timestamp": "2025-06-02T16:33:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1748825000,
+    "timestamp": "2025-06-02T13:55:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1748829651,
+    "timestamp": "2025-06-02T06:39:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1748831665,
+    "timestamp": "2025-06-02T15:31:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1748830635,
+    "timestamp": "2025-06-02T18:14:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1748828133,
+    "timestamp": "2025-06-02T12:01:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1748915896,
+    "timestamp": "2025-06-03T13:22:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1748917355,
+    "timestamp": "2025-06-03T06:41:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 1,
+        "price": 17000,
+        "total": 17000
+      }
+    ],
+    "total": 17000
+  },
+  {
+    "id": 1748910123,
+    "timestamp": "2025-06-03T06:14:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1748912249,
+    "timestamp": "2025-06-03T15:25:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1748918744,
+    "timestamp": "2025-06-03T14:50:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 1,
+        "price": 15000,
+        "total": 15000
+      }
+    ],
+    "total": 15000
+  },
+  {
+    "id": 1748915977,
+    "timestamp": "2025-06-03T09:12:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1748915968,
+    "timestamp": "2025-06-03T14:00:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1749001925,
+    "timestamp": "2025-06-04T15:47:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1748998232,
+    "timestamp": "2025-06-04T12:01:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 1,
+        "price": 15000,
+        "total": 15000
+      }
+    ],
+    "total": 15000
+  },
+  {
+    "id": 1748997230,
+    "timestamp": "2025-06-04T15:57:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1749087687,
+    "timestamp": "2025-06-05T13:20:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1749083648,
+    "timestamp": "2025-06-05T14:10:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1749084671,
+    "timestamp": "2025-06-05T10:38:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 1,
+        "price": 17000,
+        "total": 17000
+      }
+    ],
+    "total": 17000
+  },
+  {
+    "id": 1749168054,
+    "timestamp": "2025-06-06T14:24:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1749177700,
+    "timestamp": "2025-06-06T09:40:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1749174244,
+    "timestamp": "2025-06-06T15:13:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1749168838,
+    "timestamp": "2025-06-06T17:22:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1749172052,
+    "timestamp": "2025-06-06T17:56:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1749260217,
+    "timestamp": "2025-06-07T14:19:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1749263883,
+    "timestamp": "2025-06-07T07:36:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1749258916,
+    "timestamp": "2025-06-07T08:20:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1749258535,
+    "timestamp": "2025-06-07T16:47:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1749349881,
+    "timestamp": "2025-06-08T13:08:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1749347693,
+    "timestamp": "2025-06-08T06:13:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 1,
+        "price": 17000,
+        "total": 17000
+      }
+    ],
+    "total": 17000
+  },
+  {
+    "id": 1749349194,
+    "timestamp": "2025-06-08T17:28:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1749348912,
+    "timestamp": "2025-06-08T10:30:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1749430319,
+    "timestamp": "2025-06-09T17:45:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1749430344,
+    "timestamp": "2025-06-09T16:36:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1749432666,
+    "timestamp": "2025-06-09T07:31:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1749436237,
+    "timestamp": "2025-06-09T06:26:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1749432241,
+    "timestamp": "2025-06-09T15:42:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1749520364,
+    "timestamp": "2025-06-10T07:04:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1749518426,
+    "timestamp": "2025-06-10T15:37:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1749522090,
+    "timestamp": "2025-06-10T20:52:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1749522754,
+    "timestamp": "2025-06-10T06:23:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1749514227,
+    "timestamp": "2025-06-10T16:07:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1749609819,
+    "timestamp": "2025-06-11T12:28:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1749600924,
+    "timestamp": "2025-06-11T15:52:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1749600385,
+    "timestamp": "2025-06-11T15:30:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1749605119,
+    "timestamp": "2025-06-11T18:21:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1749606737,
+    "timestamp": "2025-06-11T13:17:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1749607554,
+    "timestamp": "2025-06-11T09:33:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1749608460,
+    "timestamp": "2025-06-11T15:59:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1749600695,
+    "timestamp": "2025-06-11T06:51:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1749689448,
+    "timestamp": "2025-06-12T08:39:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 1,
+        "price": 17000,
+        "total": 17000
+      }
+    ],
+    "total": 17000
+  },
+  {
+    "id": 1749688164,
+    "timestamp": "2025-06-12T17:37:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1749686664,
+    "timestamp": "2025-06-12T17:55:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 1,
+        "price": 17000,
+        "total": 17000
+      }
+    ],
+    "total": 17000
+  },
+  {
+    "id": 1749691068,
+    "timestamp": "2025-06-12T16:28:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1749689215,
+    "timestamp": "2025-06-12T10:11:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1749690291,
+    "timestamp": "2025-06-12T17:40:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1749782678,
+    "timestamp": "2025-06-13T15:34:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1749780801,
+    "timestamp": "2025-06-13T06:41:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1749782000,
+    "timestamp": "2025-06-13T09:58:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1749867060,
+    "timestamp": "2025-06-14T06:30:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 1,
+        "price": 15000,
+        "total": 15000
+      }
+    ],
+    "total": 15000
+  },
+  {
+    "id": 1749861032,
+    "timestamp": "2025-06-14T10:55:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1749862095,
+    "timestamp": "2025-06-14T13:59:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1749862690,
+    "timestamp": "2025-06-14T08:00:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1749949824,
+    "timestamp": "2025-06-15T13:32:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 1,
+        "price": 15000,
+        "total": 15000
+      }
+    ],
+    "total": 15000
+  },
+  {
+    "id": 1749946898,
+    "timestamp": "2025-06-15T18:21:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1749947914,
+    "timestamp": "2025-06-15T16:13:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1750036165,
+    "timestamp": "2025-06-16T07:02:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1750035806,
+    "timestamp": "2025-06-16T13:00:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1750040419,
+    "timestamp": "2025-06-16T09:16:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1750038293,
+    "timestamp": "2025-06-16T10:51:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 1,
+        "price": 17000,
+        "total": 17000
+      }
+    ],
+    "total": 17000
+  },
+  {
+    "id": 1750127332,
+    "timestamp": "2025-06-17T16:30:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1750123023,
+    "timestamp": "2025-06-17T06:17:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1750126564,
+    "timestamp": "2025-06-17T15:50:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1750208789,
+    "timestamp": "2025-06-18T13:09:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1750212203,
+    "timestamp": "2025-06-18T19:35:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1750212168,
+    "timestamp": "2025-06-18T13:26:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1750298184,
+    "timestamp": "2025-06-19T18:56:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1750300576,
+    "timestamp": "2025-06-19T08:07:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1750301179,
+    "timestamp": "2025-06-19T11:32:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1750291503,
+    "timestamp": "2025-06-19T13:12:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1750292325,
+    "timestamp": "2025-06-19T16:40:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1750380798,
+    "timestamp": "2025-06-20T15:23:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 1,
+        "price": 15000,
+        "total": 15000
+      }
+    ],
+    "total": 15000
+  },
+  {
+    "id": 1750386707,
+    "timestamp": "2025-06-20T14:06:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1750385800,
+    "timestamp": "2025-06-20T17:15:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1750383371,
+    "timestamp": "2025-06-20T19:35:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1750466201,
+    "timestamp": "2025-06-21T20:24:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1750471419,
+    "timestamp": "2025-06-21T14:46:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1750471070,
+    "timestamp": "2025-06-21T08:21:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1750473604,
+    "timestamp": "2025-06-21T14:43:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1750466891,
+    "timestamp": "2025-06-21T17:05:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1750464629,
+    "timestamp": "2025-06-21T06:38:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1750466823,
+    "timestamp": "2025-06-21T10:43:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 1,
+        "price": 17000,
+        "total": 17000
+      }
+    ],
+    "total": 17000
+  },
+  {
+    "id": 1750557173,
+    "timestamp": "2025-06-22T18:20:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1750558196,
+    "timestamp": "2025-06-22T20:47:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1750550850,
+    "timestamp": "2025-06-22T06:17:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1750644200,
+    "timestamp": "2025-06-23T08:51:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1750642416,
+    "timestamp": "2025-06-23T09:50:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1750640754,
+    "timestamp": "2025-06-23T11:29:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 2,
+        "price": 20000,
+        "total": 40000
+      }
+    ],
+    "total": 40000
+  },
+  {
+    "id": 1750640198,
+    "timestamp": "2025-06-23T17:01:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1750638929,
+    "timestamp": "2025-06-23T14:10:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1750645144,
+    "timestamp": "2025-06-23T17:22:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1750728456,
+    "timestamp": "2025-06-24T10:57:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1750723562,
+    "timestamp": "2025-06-24T15:32:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1750731660,
+    "timestamp": "2025-06-24T18:12:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1750730166,
+    "timestamp": "2025-06-24T14:22:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1750726482,
+    "timestamp": "2025-06-24T12:54:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 1,
+        "price": 17000,
+        "total": 17000
+      }
+    ],
+    "total": 17000
+  },
+  {
+    "id": 1750724252,
+    "timestamp": "2025-06-24T07:23:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1750727564,
+    "timestamp": "2025-06-24T19:53:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1750811896,
+    "timestamp": "2025-06-25T14:47:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1750817155,
+    "timestamp": "2025-06-25T16:20:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1750817602,
+    "timestamp": "2025-06-25T06:13:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1750810829,
+    "timestamp": "2025-06-25T11:03:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  },
+  {
+    "id": 1750818617,
+    "timestamp": "2025-06-25T09:30:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1750897940,
+    "timestamp": "2025-06-26T12:57:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1750903187,
+    "timestamp": "2025-06-26T13:05:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1750902418,
+    "timestamp": "2025-06-26T13:11:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1750897664,
+    "timestamp": "2025-06-26T17:50:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 3,
+        "price": 15000,
+        "total": 45000
+      }
+    ],
+    "total": 45000
+  },
+  {
+    "id": 1750898652,
+    "timestamp": "2025-06-26T16:57:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 1,
+        "price": 15000,
+        "total": 15000
+      }
+    ],
+    "total": 15000
+  },
+  {
+    "id": 1750898326,
+    "timestamp": "2025-06-26T15:14:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1750898795,
+    "timestamp": "2025-06-26T14:53:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1750989333,
+    "timestamp": "2025-06-27T11:05:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 1,
+        "price": 20000,
+        "total": 20000
+      }
+    ],
+    "total": 20000
+  },
+  {
+    "id": 1750988298,
+    "timestamp": "2025-06-27T12:54:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1750988761,
+    "timestamp": "2025-06-27T07:58:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 2,
+        "price": 25000,
+        "total": 50000
+      }
+    ],
+    "total": 50000
+  },
+  {
+    "id": 1751073047,
+    "timestamp": "2025-06-28T20:40:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 1,
+        "price": 15000,
+        "total": 15000
+      }
+    ],
+    "total": 15000
+  },
+  {
+    "id": 1751074134,
+    "timestamp": "2025-06-28T17:42:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 1,
+        "price": 25000,
+        "total": 25000
+      }
+    ],
+    "total": 25000
+  },
+  {
+    "id": 1751070199,
+    "timestamp": "2025-06-28T15:22:00",
+    "items": [
+      {
+        "name": "Bạc xỉu",
+        "quantity": 3,
+        "price": 20000,
+        "total": 60000
+      }
+    ],
+    "total": 60000
+  },
+  {
+    "id": 1751074682,
+    "timestamp": "2025-06-28T06:32:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1751156935,
+    "timestamp": "2025-06-29T08:51:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 2,
+        "price": 17000,
+        "total": 34000
+      }
+    ],
+    "total": 34000
+  },
+  {
+    "id": 1751156528,
+    "timestamp": "2025-06-29T09:12:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 1,
+        "price": 17000,
+        "total": 17000
+      }
+    ],
+    "total": 17000
+  },
+  {
+    "id": 1751164212,
+    "timestamp": "2025-06-29T20:49:00",
+    "items": [
+      {
+        "name": "Đen",
+        "quantity": 2,
+        "price": 15000,
+        "total": 30000
+      }
+    ],
+    "total": 30000
+  },
+  {
+    "id": 1751249553,
+    "timestamp": "2025-06-30T12:41:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1751246410,
+    "timestamp": "2025-06-30T15:17:00",
+    "items": [
+      {
+        "name": "Cà phê ủ lạnh",
+        "quantity": 3,
+        "price": 25000,
+        "total": 75000
+      }
+    ],
+    "total": 75000
+  },
+  {
+    "id": 1751249211,
+    "timestamp": "2025-06-30T17:00:00",
+    "items": [
+      {
+        "name": "Nâu",
+        "quantity": 3,
+        "price": 17000,
+        "total": 51000
+      }
+    ],
+    "total": 51000
+  }
+]

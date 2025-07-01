@@ -17,10 +17,18 @@ import { useDispatch } from 'react-redux';
 
 // import state selectors
 import { setSetting } from './store/setting/actions'
+import fakeSalesLogs from "./salesLogs.json";
+import { useEffect } from "react";
 
 function App(props) {
   const dispatch = useDispatch()
   dispatch(setSetting())
+  useEffect(() => {
+    const existingLogs = localStorage.getItem("salesLogs");
+    if (!existingLogs) {
+      localStorage.setItem("salesLogs", JSON.stringify(fakeSalesLogs));
+    }
+  }, []);
   return (
     <div className="App">
       {props.children}
