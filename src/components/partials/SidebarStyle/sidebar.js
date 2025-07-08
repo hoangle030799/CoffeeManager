@@ -5,7 +5,7 @@ import logo from "../../../assets/images/logo.png";
 import VerticalNav from "./verticalNav";
 
 // Redux Selector / Action
-import {  useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 // Import selectors & action from setting store
 import * as SettingSelector from "../../../store/setting/selectors";
 
@@ -38,7 +38,7 @@ const Sidebar = memo(() => {
           </div>
         </div>
         <div id="sidebar-scrollbar">
-            <VerticalNav />
+          <VerticalNav />
         </div>
       </div>
     </Fragment>

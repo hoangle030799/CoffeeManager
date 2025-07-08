@@ -1,4 +1,4 @@
-import React,{useEffect,Fragment,memo} from 'react'
+import React, { useEffect, Fragment, memo } from 'react'
 
 // router-dom
 import { Outlet } from 'react-router-dom'
@@ -18,21 +18,20 @@ import Footer from '../components/partials/FooterStyle/footer'
 const DefaultLayout = memo(() => {
   useEffect(() => {
     //scroll up pages go
- window.scrollTo({top: 0, behavior: 'smooth'});
-})
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  })
   return (
     <Fragment>
-        <div className="wrapper">
+      <div className="wrapper">
         <Sidebar />
-          <div id="content-page" className="content-page">
-        <Header />
-            <Container fluid>
-              {/* <h1>DefaultLayout.</h1> */}
-              <Outlet></Outlet>
-            </Container>
-            <Footer />
-          </div>
+        <div id="content-page" className="content-page">
+          <Header />
+          <Container fluid>
+            <Outlet></Outlet>
+          </Container>
+          <Footer />
         </div>
+      </div>
     </Fragment>
   )
 })

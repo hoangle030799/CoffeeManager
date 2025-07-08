@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 const Revenue = () => {
   const [logs, setLogs] = useState([]);
-  const [filter, setFilter] = useState("month");
+  const [filter, setFilter] = useState("day");
   const [reportData, setReportData] = useState({ labels: [], series: [] });
   const [marketingMessage, setMarketingMessage] = useState("");
   const [showEditModal, setShowEditModal] = useState(false);

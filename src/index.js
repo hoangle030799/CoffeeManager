@@ -11,7 +11,6 @@ import App from './App';
 //pages-router
 import { IndexRouters } from './router/index-routers'
 import { ErrorRouter } from './router/error-router';
-import { AuthRouter } from './router/auth-router';
 
 //store
 import { Provider } from 'react-redux';
@@ -21,8 +20,7 @@ import FloatingSellButton from './views/FloatingSellButton';
 
 const router = createBrowserRouter([
   ...IndexRouters,
-  ...ErrorRouter,
-  ...AuthRouter
+  ...ErrorRouter
 ], { basename: process.env.PUBLIC_URL })
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

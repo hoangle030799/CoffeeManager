@@ -65,6 +65,7 @@ const FloatingSellButton = () => {
 
         alert(`Đã lưu đơn bán: ${selectedItem} × ${quantity} = ${total.toLocaleString()}đ`);
         handleClose();
+        window.location.reload(); // Tải lại trang để cập nhật dữ liệu
     };
 
     return (
