@@ -182,7 +182,18 @@ const Inventory = () => {
           <div className="p-4">
             <Row className="mb-3 justify-content-between align-items-center">
               <Col><h3>Quản lý kho</h3></Col>
-              <Col xs="auto"><Button onClick={handleShowModal}>Quản lý kho</Button></Col>
+              <Col xs="auto">
+                <button
+                  className="btn"
+                  onClick={handleShowModal}
+                  style={{
+                    backgroundColor: "rgb(166, 114, 74)",
+                    color: "#fff",
+                  }}
+                >
+                  Quản lý kho
+                </button>
+              </Col>
             </Row>
 
             <h5>Nguyên liệu</h5>

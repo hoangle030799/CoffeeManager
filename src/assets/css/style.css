@@ -97,7 +97,7 @@ dl dd:last-child {
 
 a:hover {
   text-decoration: none;
-  color: #02818f;
+  color: #5C4033;
 }
 
 .dropdown-item {
@@ -1302,7 +1302,7 @@ div#lottie-fullscreen svg path {
 
 .iq-sidebar-logo a span {
   margin-left: 10px;
-  font-size: 28px;
+  font-size: 15px;
   line-height: 45px;
   color: #ffffff;
   font-family: 'Poppins', sans-serif;
@@ -1565,7 +1565,7 @@ body.sidebar-main .iq-menu-bt-sidebar .iq-menu-bt {
   -ms-transition: all 0.3s ease-out 0s;
   -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  background: #eff7f8;
+  background: #f7eee4;
   border-radius: 25px 0 0 25px;
 }
 

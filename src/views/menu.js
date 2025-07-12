@@ -109,7 +109,13 @@ const Menu = () => {
             </div>
 
             <div className="text-center mt-4">
-              <button className="btn btn-primary" onClick={handleThemMon}>
+              <button
+                className="btn"
+                style={{
+                  backgroundColor: "rgb(166, 114, 74)",
+                  color: "#fff",
+                }}
+                onClick={handleThemMon}>
                 Thêm món
               </button>
             </div>

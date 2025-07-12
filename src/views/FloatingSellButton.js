@@ -46,8 +46,8 @@ const FloatingSellButton = () => {
         const total = price * quantity;
 
         const newSale = {
-            id: Date.now(), // ID duy nhất
-            timestamp: new Date().toISOString(), // ngày giờ chuẩn ISO
+            id: Date.now(),
+            timestamp: new Date().toISOString(),
             items: [
                 {
                     name: selectedItem,
@@ -78,8 +78,18 @@ const FloatingSellButton = () => {
                     zIndex: 9999,
                 }}
             >
-                <Button variant="success" onClick={handleOpen}>
-                    Bán hàng
+                <Button
+                    variant="outline-secondary"
+                    className="rounded-circle d-flex justify-content-center align-items-center text-center shadow"
+                    style={{
+                        backgroundColor: "#a47551", // Màu cafe sữa
+                        width: "48px",
+                        height: "48px",
+                        fontSize: "24px",
+                        border: "none"
+                    }}
+                >
+                    <i className="ri-add-line m-0"></i>
                 </Button>
             </div>
 

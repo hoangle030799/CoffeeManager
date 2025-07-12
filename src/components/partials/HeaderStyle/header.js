@@ -10,15 +10,11 @@ import { Navbar, Dropdown } from "react-bootstrap";
 import CustomToggle from "../../dropdowns";
 
 // img
-import Logo from "../../../assets/images/logo.png";
+import Logo2 from "../../../assets/images/logo2.png";
 
 import user1 from "../../../assets/images/user/1.jpg";
-import { useSelector, useDispatch } from "react-redux";
-import * as SettingSelector from "../../../store/setting/selectors";
-import * as SettingAction from "../../../store/setting/actions";
 
 const Header = memo(() => {
-  // Fixed Header
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
@@ -37,36 +33,16 @@ const Header = memo(() => {
     };
   }, []);
 
-  const appName = useSelector(SettingSelector.app_name);
-  const themeSchemeDirection = useSelector(
-    SettingSelector.theme_scheme_direction
-  );
-  const dispatch = useDispatch();
-  const changeThemeSchemeDir = (e) => {
-    let value = "ltr";
-    if (themeSchemeDirection === "ltr") {
-      value = "rtl";
-    }
-    dispatch(SettingAction.theme_scheme_direction(value));
-  };
   return (
     <Fragment>
       <div className={`iq-top-navbar ${isFixed ? "fixed-header" : ""}`}>
         <div className="iq-navbar-custom">
-          <div className="iq-sidebar-logo">
-            <div className="top-logo">
-              <Link to="index.html" className="logo">
-                <img src="images/logo.png" className="img-fluid" alt="" />
-                <span>{appName}</span>
-              </Link>
-            </div>
-          </div>
           <Navbar expand="lg" variant="light" className="p-0">
             <div className="iq-top-navbar cafe-header">
               <div className="iq-navbar-custom d-flex justify-content-between align-items-center p-2">
                 <div className="d-flex align-items-center gap-3">
                   <Link to="/" className="logo d-flex align-items-center gap-2">
-                    <img src={Logo} alt="logo" style={{ height: 30 }} />
+                    <img src={Logo2} alt="logo" style={{ height: 30 }} />
                     <span className="fw-bold text-cafe">CafeManager</span>
                   </Link>
                 </div>
