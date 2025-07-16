@@ -43,28 +43,23 @@ const Header = memo(() => {
                 <div className="d-flex align-items-center gap-3">
                   <Link to="/" className="logo d-flex align-items-center gap-2">
                     <img src={Logo2} alt="logo" style={{ height: 30 }} />
-                    <span className="fw-bold text-cafe">CafeManager</span>
+                    <span className="fw-bold text-cafe">EasyCoffeeManager</span>
                   </Link>
                 </div>
 
-                <div className="d-flex align-items-center gap-3">
-                  <form className="searchbox d-none d-md-block">
-                    <input
-                      type="text"
-                      className="form-control form-control-sm"
-                      placeholder="Tìm kiếm..."
-                      style={{ backgroundColor: "#f3f1ee" }}
-                    />
-                  </form>
-
+                <div className="d-flex align-items-center">
                   <Dropdown>
                     <Dropdown.Toggle as={CustomToggle} className="d-flex align-items-center">
                       <img src={user1} alt="user" className="rounded-circle" style={{ width: 30, height: 30 }} />
                       <span className="ms-2 text-dark fw-semibold">Admin</span>
                     </Dropdown.Toggle>
                     <Dropdown.Menu>
-                      <Dropdown.Item>Thông tin</Dropdown.Item>
-                      <Dropdown.Item>Đăng xuất</Dropdown.Item>
+                      <Dropdown.Item onClick={() => alert("🔧 Tính năng đang phát triển!")}>
+                        Thông tin
+                      </Dropdown.Item>
+                      <Dropdown.Item onClick={() => alert("🔧 Tính năng đang phát triển!")}>
+                        Đăng xuất
+                      </Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 </div>

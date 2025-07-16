@@ -222,6 +222,7 @@ const Revenue = () => {
                 chart: { stacked: true },
                 xaxis: { categories: reportData.labels },
                 tooltip: { y: { formatter: (val) => val.toLocaleString() + "đ" } },
+                colors: ["#a47551"],
               }}
             />
           </Card>

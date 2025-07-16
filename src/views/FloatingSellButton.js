@@ -82,16 +82,18 @@ const FloatingSellButton = () => {
                     variant="outline-secondary"
                     className="rounded-circle d-flex justify-content-center align-items-center text-center shadow"
                     style={{
-                        backgroundColor: "#a47551", // Màu cafe sữa
+                        backgroundColor: "rgb(166, 114, 74)", // Màu cafe sữa
                         width: "48px",
                         height: "48px",
                         fontSize: "24px",
-                        border: "none"
+                        border: "none",
+                        marginBottom: "60px"
                     }}
+                    onClick={handleOpen}
                 >
                     <i className="ri-add-line m-0"></i>
                 </Button>
-            </div>
+            </div >
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -134,9 +136,16 @@ const FloatingSellButton = () => {
                     <Button variant="secondary" onClick={handleClose}>
                         Hủy
                     </Button>
-                    <Button variant="primary" onClick={handleSubmit}>
+                    <button
+                        className="btn"
+                        onClick={handleSubmit}
+                        style={{
+                            backgroundColor: "rgb(166, 114, 74)",
+                            color: "#fff",
+                        }}
+                    >
                         Xác nhận bán
-                    </Button>
+                    </button>
                 </Modal.Footer>
             </Modal>
         </>

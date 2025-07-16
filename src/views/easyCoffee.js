@@ -363,7 +363,14 @@ const Home = () => {
                       {renderMenu(menuDraft)}
                     </div>
                     <div div className="mt-3 d-flex gap-2 justify-content-center">
-                      <button className="btn btn-primary" onClick={handleSubmit}>
+                      <button
+                        className="btn"
+                        style={{
+                          backgroundColor: "rgb(166, 114, 74)",
+                          color: "#fff",
+                        }}
+                        onClick={handleSubmit}
+                      >
                         Submit menu
                       </button>
                       <button onClick={handleClear} className="btn btn-outline-secondary">
