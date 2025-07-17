@@ -10,7 +10,7 @@ const Home = () => {
   const menuData = {
     "nông thôn": {
       Hot: [
-        { name: "Đen đá", price: "13000" },
+        { name: "Đen", price: "13000" },
         { name: "Nâu", price: "15000" },
         { name: "Bạc xỉu", price: "18000" },
       ],
@@ -23,7 +23,7 @@ const Home = () => {
     },
     "thành thị": {
       Hot: [
-        { name: "Đen đá", price: "18000" },
+        { name: "Đen", price: "18000" },
         { name: "Nâu", price: "20000" },
         { name: "Bạc xỉu", price: "25000" },
       ],

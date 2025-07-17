@@ -64,14 +64,14 @@ const VerticalNav = memo(() => {
           <SidebarMenu
             isTag="true"
             pathname="/inventory"
-            title="Inventory"
+            title="Quản lý kho"
           >
             <i className="ri-archive-fill me-2"></i>
           </SidebarMenu>
           <SidebarMenu
             isTag="true"
             pathname="/revenue"
-            title="Revenue"
+            title="Doanh thu"
           >
             <i className="ri-bar-chart-fill me-2"></i>
           </SidebarMenu>

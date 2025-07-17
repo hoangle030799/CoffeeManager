@@ -10,7 +10,7 @@ const Revenue = () => {
   const [logs, setLogs] = useState([]);
   const [filter, setFilter] = useState("day");
   const [reportData, setReportData] = useState({ labels: [], series: [] });
-  const [marketingMessage, setMarketingMessage] = useState("");
+  const [marketingMessage, setMarketingMessage] = useState([]);
   const [showEditModal, setShowEditModal] = useState(false);
 
   useEffect(() => {
@@ -92,23 +92,69 @@ const Revenue = () => {
     const previousMonth = currentMonth === 0 ? 11 : currentMonth - 1;
     const previousYear = currentMonth === 0 ? currentYear - 1 : currentYear;
 
-    const filtered = logs.filter(
-      (log) =>
-        log.timestamp.getMonth() === previousMonth &&
-        log.timestamp.getFullYear() === previousYear
-    );
+    const filtered = logs.filter((log) => {
+      const date = new Date(log.timestamp);
+      return (
+        date.getMonth() === previousMonth &&
+        date.getFullYear() === previousYear
+      );
+    });
 
-    const days = new Set(filtered.map((log) => log.timestamp.toDateString()));
-    const weeks = new Set(filtered.map((log) => getWeekNumber(log.timestamp)));
+    const days = new Set(filtered.map((log) => new Date(log.timestamp).toDateString()));
+    const weeks = new Set(filtered.map((log) => getWeekNumber(new Date(log.timestamp))));
 
     if (days.size < 10 || weeks.size < 4) {
-      setMarketingMessage(
-        "Chưa đủ dữ liệu để đưa ra gợi ý marketing mới. Hãy bán hàng chăm chỉ hơn tháng này nhé!"
-      );
+      setMarketingMessage([
+        "Chưa đủ dữ liệu để đưa ra gợi ý marketing mới. Hãy bán hàng chăm chỉ hơn tháng này nhé!",
+      ]);
     } else {
-      setMarketingMessage(
-        `Gợi ý tháng ${currentMonth + 1}: Tập trung khuyến mãi vào cuối tuần, vì doanh thu cao nhất thường rơi vào thứ 7 và CN.`
-      );
+      const timeAnalysis = {
+        morningCount: 0,
+        weekendCount: 0,
+        itemCounts: {},
+      };
+
+      filtered.forEach((log) => {
+        const date = new Date(log.timestamp);
+        const hour = date.getHours();
+        const day = date.getDay();
+
+        if (hour < 11) timeAnalysis.morningCount++;
+        if (day === 0 || day === 6) timeAnalysis.weekendCount++;
+
+        log.items.forEach((item) => {
+          if (!timeAnalysis.itemCounts[item.name]) {
+            timeAnalysis.itemCounts[item.name] = 0;
+          }
+          timeAnalysis.itemCounts[item.name] += item.quantity;
+        });
+      });
+
+      const topItem = Object.entries(timeAnalysis.itemCounts)
+        .sort((a, b) => b[1] - a[1])[0]?.[0] || "";
+
+      const suggestions = [];
+
+      if (timeAnalysis.weekendCount > filtered.length * 0.4) {
+        suggestions.push(
+          "Tập trung khuyến mãi vào cuối tuần, vì doanh thu cao nhất thường rơi vào thứ 7 và CN."
+        );
+      }
+
+      if (timeAnalysis.morningCount > filtered.length * 0.3) {
+        suggestions.push(
+          "Tăng khuyến mãi buổi sáng (trước 11h), vì thời điểm này có nhiều đơn nhất."
+        );
+      }
+
+      if (topItem) {
+        suggestions.push(
+          `Tạo combo ưu đãi cho món "${topItem}", vì đây là món được gọi nhiều nhất tháng trước.`
+        );
+      }
+
+      const selected = suggestions.sort(() => 0.5 - Math.random()).slice(0, 2);
+      setMarketingMessage(selected);
     }
   }, [logs]);
 
@@ -233,9 +279,11 @@ const Revenue = () => {
               <span style={{ fontSize: "1.5rem", marginRight: "10px" }}>📢</span>
               <div>
                 <strong>Gợi ý marketing tháng {new Date().getMonth() + 1}</strong>
-                <p className="mb-0" style={{ color: "#333", fontSize: "1rem", lineHeight: "1.5" }}>
-                  {marketingMessage}
-                </p>
+                <ul className="mb-0" style={{ color: "#333", fontSize: "1rem", lineHeight: "1.5" }}>
+                  {marketingMessage.map((msg, idx) => (
+                    <li key={idx}>{msg}</li>
+                  ))}
+                </ul>
               </div>
             </div>
           </div>
