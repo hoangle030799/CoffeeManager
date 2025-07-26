@@ -21,21 +21,14 @@ const Sidebar = memo(() => {
       <div className="iq-sidebar">
         <div className="iq-sidebar-logo d-flex justify-content-between">
           <Link to="/">
-            <img src={logo1} className="img-fluid" alt="" />
-            <span>Coffee Manager</span>
+            <img
+              src={logo1}
+              className="img-fluid"
+              alt=""
+              style={{ height: "90px" }}
+            />
+            <span className="fs-3">Coffee Manager</span>
           </Link>
-          <div className="iq-menu-bt-sidebar">
-            <div className="iq-menu-bt align-self-center">
-              <div className="wrapper-menu">
-                <div className="main-circle">
-                  <i className="ri-more-fill"></i>
-                </div>
-                <div className="hover-circle">
-                  <i className="ri-more-2-fill" onClick={minisidebar}></i>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
         <div id="sidebar-scrollbar">
           <VerticalNav />

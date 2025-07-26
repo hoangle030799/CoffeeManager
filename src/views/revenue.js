@@ -1,10 +1,9 @@
 import React, { Fragment, useEffect, useState } from "react";
-import { Col, Row, Card, Alert, Form, Modal, Button } from "react-bootstrap";
+import { Col, Row, Card, Form, Modal, Button } from "react-bootstrap";
 import Chart from "react-apexcharts";
 
 import "swiper/css";
 import "swiper/css/pagination";
-
 
 const Revenue = () => {
   const [logs, setLogs] = useState([]);
@@ -12,6 +11,62 @@ const Revenue = () => {
   const [reportData, setReportData] = useState({ labels: [], series: [] });
   const [marketingMessage, setMarketingMessage] = useState([]);
   const [showEditModal, setShowEditModal] = useState(false);
+  const [selectedDate, setSelectedDate] = useState(new Date());
+
+  const filteredLogs = logs.filter(
+    (log) =>
+      new Date(log.timestamp).toDateString() === selectedDate.toDateString()
+  );
+  const handleDownloadLogs = () => {
+    const selectedDateLogs = logs.filter((log) => {
+      const logDate = new Date(log.timestamp);
+      return (
+        logDate.getFullYear() === selectedDate.getFullYear() &&
+        logDate.getMonth() === selectedDate.getMonth() &&
+        logDate.getDate() === selectedDate.getDate()
+      );
+    });
+
+    if (selectedDateLogs.length === 0) {
+      alert("Không có dữ liệu để tải xuống.");
+      return;
+    }
+
+    const dateStr = selectedDate.toLocaleDateString("vi-VN");
+    let csv = "\uFEFF";
+    csv += `,Doanh thu ngày ${dateStr}\n\n`;
+    let totalRevenue = 0;
+
+    selectedDateLogs.forEach((log) => {
+      const time = new Date(log.timestamp).toLocaleTimeString("vi-VN");
+
+      csv += "ID,Thời gian,Tên món,Số lượng,Đơn giá\n";
+
+      log.items.forEach((item, idx) => {
+        const idCell = idx === 0 ? `"=""${log.id}"""` : "";
+        const timeCell = idx === 0 ? time : "";
+        const priceFormatted = item.price.toLocaleString("vi-VN") + "₫";
+        csv += `${idCell},${timeCell},"${item.name}",${item.quantity},${priceFormatted}\n`;
+      });
+
+      const totalFormatted = log.total.toLocaleString("vi-VN") + "₫";
+      csv += `,,,Tổng đơn: ${totalFormatted}\n\n`;
+      totalRevenue += log.total;
+    });
+
+    // Dòng tổng doanh thu trong ngày
+    const totalRevenueFormatted = totalRevenue.toLocaleString("vi-VN") + "₫";
+    csv += `,Tổng doanh thu trong ngày: ${totalRevenueFormatted}\n`;
+
+    // Tạo file và tải
+    const blob = new Blob([csv], { type: "text/csv;charset=utf-8;" });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = `doanhthu_${selectedDate.toISOString().split("T")[0]}.csv`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
 
   useEffect(() => {
     const raw = localStorage.getItem("salesLogs");
@@ -34,9 +89,15 @@ const Revenue = () => {
     return Math.ceil(((d - yearStart) / 86400000 + 1) / 7);
   };
   const salesLogs = JSON.parse(localStorage.getItem("salesLogs")) || [];
-  const today = new Date().toISOString().slice(0, 10); // yyyy-mm-dd
-  const todayLogs = salesLogs.filter(log => log.timestamp.startsWith(today));
 
+  const selectedDateLogs = salesLogs.filter((log) => {
+    const logDate = new Date(log.timestamp);
+    return (
+      logDate.getFullYear() === selectedDate.getFullYear() &&
+      logDate.getMonth() === selectedDate.getMonth() &&
+      logDate.getDate() === selectedDate.getDate()
+    );
+  });
   const groupBy = (array, keyFn) => {
     return array.reduce((acc, item) => {
       const key = keyFn(item);
@@ -44,6 +105,12 @@ const Revenue = () => {
       acc[key].push(item);
       return acc;
     }, {});
+  };
+  const handleDeleteLog = (id) => {
+    const updated = logs.filter(log => log.id !== id);
+    setLogs(updated);
+    localStorage.setItem("salesLogs", JSON.stringify(updated));
+    setShowEditModal(false);
   };
 
   useEffect(() => {
@@ -158,56 +225,69 @@ const Revenue = () => {
     }
   }, [logs]);
 
-  const handleDeleteLog = (id) => {
-    const updated = logs.filter(log => log.id !== id);
-    setLogs(updated);
-    localStorage.setItem("salesLogs", JSON.stringify(updated));
-    setShowEditModal(false);
-  };
-
-  const handleEditLog = (id) => {
-    alert("Hiện tại chức năng sửa đang trong quá trình phát triển.");
-  };
-
   return (
     <Fragment>
       <Col>
         <div className="p-3 border rounded mb-4">
           <div className="d-flex justify-content-between align-items-center mb-2">
-            <h5 className="mb-0">Doanh thu hôm nay</h5>
-            <button className="btn btn-outline-secondary btn-sm" onClick={() => setShowEditModal(true)}>
-              <i className="ri-edit-line"></i>
-            </button>
+            <div className="form-group d-flex align-items-center mb-3">
+              <label htmlFor="revenueDate" className="me-4 fw-semibold text-nowrap" style={{ minWidth: '100px' }}>
+                Doanh thu ngày
+              </label>
+              <input
+                type="date"
+                id="revenueDate"
+                className="form-control custom-date-input"
+                value={selectedDate.toISOString().split("T")[0]}
+                onChange={(e) => setSelectedDate(new Date(e.target.value))}
+              />
+            </div>
+            <div className="form-group d-flex align-items-center mb-3">
+              <button className="btn btn-outline-secondary btn-sm" onClick={() => setShowEditModal(true)}>
+                <i className="ri-edit-line"></i>
+              </button>
+              <Button
+                variant="outline-primary"
+                size="sm"
+                className="ms-2 btn btn-outline-secondary"
+                onClick={handleDownloadLogs}
+              >
+                <i className="ri-download-2-line me-1"></i>
+              </Button>
+            </div>
           </div>
 
-          {todayLogs.length === 0 ? (
-            <p className="text-muted mt-2">Chưa có đơn nào hôm nay.</p>
+          {filteredLogs.length === 0 ? (
+            <p className="text-muted mt-2">Chưa có đơn nào trong ngày này.</p>
           ) : (
             <div>
-              {todayLogs.map((log, index) => (
+              {filteredLogs.map((log, index) => (
                 <div
                   key={index}
-                  className="d-flex flex-column border-bottom pb-2 mb-2"
+                  className="border-bottom pb-2 mb-3"
                   style={{ fontSize: "0.9rem" }}
                 >
-                  <div className="d-flex justify-content-between">
-                    <div>
+                  <div className="d-flex justify-content-between align-items-start">
+                    <div style={{ flex: 2 }}>
                       <strong>🧾 Đơn #{log.id}</strong>
+                      <div className="text-secondary mt-1">
+                        {log.items.map((item, i) => (
+                          <div key={i}>
+                            • {item.name} × {item.quantity} ={" "}
+                            {item.total.toLocaleString()}đ
+                          </div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="text-muted">{new Date(log.timestamp).toLocaleTimeString()}</div>
-                  </div>
 
-                  <div className="text-secondary mt-1 mb-1">
-                    {log.items.map((item, i) => (
-                      <span key={i}>
-                        {item.name} × {item.quantity} = {item.total.toLocaleString()}đ
-                        {i < log.items.length - 1 && " – "}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="fw-bold text-end">
-                    Tổng: {log.total.toLocaleString()}đ
+                    <div className="text-end" style={{ flex: 1, minWidth: "120px" }}>
+                      <div className="text-muted">
+                        {new Date(log.timestamp).toLocaleTimeString()}
+                      </div>
+                      <div className="fw-bold mt-2">
+                        Tổng: {log.total.toLocaleString()}đ
+                      </div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -220,10 +300,10 @@ const Revenue = () => {
           <Modal.Title>Edit</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {todayLogs.length === 0 ? (
+          {selectedDateLogs.length === 0 ? (
             <p className="text-muted">Không có đơn nào hôm nay.</p>
           ) : (
-            todayLogs.map((log, idx) => (
+            selectedDateLogs.map((log) => (
               <div key={log.id} className="border rounded p-3 mb-3">
                 <div className="d-flex justify-content-between">
                   <strong>Đơn #{log.id}</strong>
@@ -231,7 +311,7 @@ const Revenue = () => {
                 </div>
                 <ul className="list-unstyled mt-2">
                   {log.items.map((item, i) => (
-                    <li key={i}>{item.name} × {item.quantity} = {item.total.toLocaleString()}đ</li>
+                    <li key={i}>• {item.name} × {item.quantity} = {item.total.toLocaleString()}đ</li>
                   ))}
                 </ul>
                 <div className="fw-bold mb-2">Tổng: {log.total.toLocaleString()}đ</div>

@@ -4,6 +4,10 @@ import { Modal, Button, Form } from "react-bootstrap";
 const FloatingSellButton = () => {
     const [show, setShow] = useState(false);
     const [menu, setMenu] = useState({});
+    const [orderItems, setOrderItems] = useState([]);
+    const [tempItem, setTempItem] = useState("");
+    const [tempQuantity, setTempQuantity] = useState(1);
+    const [tempPrice, setTempPrice] = useState(0);
     const [selectedItem, setSelectedItem] = useState("");
     const [quantity, setQuantity] = useState(1);
     const [price, setPrice] = useState(0);
@@ -24,38 +28,47 @@ const FloatingSellButton = () => {
 
     const handleItemChange = (e) => {
         const value = e.target.value;
-        setSelectedItem(value);
-
-        let found = null;
+        setTempItem(value);
         for (const list of Object.values(menu)) {
             const item = list.find((i) => i.name === value);
             if (item) {
-                found = item;
+                setTempPrice(Number(item.price));
                 break;
             }
         }
-        if (found) setPrice(Number(found.price));
+    };
+
+    const handleAddItem = () => {
+        if (!tempItem || tempQuantity <= 0) return;
+
+        const total = tempPrice * tempQuantity;
+        setOrderItems([
+            ...orderItems,
+            {
+                name: tempItem,
+                quantity: tempQuantity,
+                price: tempPrice,
+                total,
+            },
+        ]);
+
+        // Reset món tạm
+        setTempItem("");
+        setTempQuantity(1);
+        setTempPrice(0);
     };
 
     const handleSubmit = () => {
-        if (!selectedItem || !quantity || quantity <= 0) {
-            alert("Vui lòng chọn món và nhập số lượng hợp lệ.");
+        if (orderItems.length === 0) {
+            alert("Vui lòng thêm ít nhất một món.");
             return;
         }
 
-        const total = price * quantity;
-
+        const total = orderItems.reduce((acc, item) => acc + item.total, 0);
         const newSale = {
             id: Date.now(),
             timestamp: new Date().toISOString(),
-            items: [
-                {
-                    name: selectedItem,
-                    quantity: Number(quantity),
-                    price: Number(price),
-                    total: total,
-                },
-            ],
+            items: orderItems,
             total,
         };
 
@@ -63,11 +76,10 @@ const FloatingSellButton = () => {
         logs.push(newSale);
         localStorage.setItem("salesLogs", JSON.stringify(logs));
 
-        alert(`Đã lưu đơn bán: ${selectedItem} × ${quantity} = ${total.toLocaleString()}đ`);
+        alert("Đã lưu đơn hàng.");
         handleClose();
-        window.location.reload(); // Tải lại trang để cập nhật dữ liệu
+        window.location.reload();
     };
-
     return (
         <>
             <div
@@ -102,7 +114,7 @@ const FloatingSellButton = () => {
                 <Modal.Body>
                     <Form.Group className="mb-3">
                         <Form.Label>Chọn món</Form.Label>
-                        <Form.Select value={selectedItem} onChange={handleItemChange}>
+                        <Form.Select value={tempItem} onChange={handleItemChange}>
                             <option value="">-- Chọn món --</option>
                             {Object.entries(menu).map(([loai, items]) =>
                                 items.map((item, idx) => (
@@ -118,18 +130,28 @@ const FloatingSellButton = () => {
                         <Form.Label>Số lượng</Form.Label>
                         <Form.Control
                             type="number"
-                            value={quantity}
-                            onChange={(e) => setQuantity(e.target.value)}
+                            value={tempQuantity}
+                            onChange={(e) => setTempQuantity(Number(e.target.value))}
                             min={1}
                         />
                     </Form.Group>
 
-                    {selectedItem && (
-                        <p>
-                            Giá mỗi món: <strong>{price.toLocaleString()}đ</strong>
-                            <br />
-                            Tổng tiền: <strong>{(price * quantity).toLocaleString()}đ</strong>
-                        </p>
+                    <Button variant="outline-primary" onClick={handleAddItem}>
+                        ➕ Thêm vào đơn hàng
+                    </Button>
+
+                    {orderItems.length > 0 && (
+                        <div className="mt-3">
+                            <h6>Danh sách món đã chọn:</h6>
+                            <ul>
+                                {orderItems.map((item, idx) => (
+                                    <li key={idx}>
+                                        {item.name} × {item.quantity} = {item.total.toLocaleString()}đ
+                                    </li>
+                                ))}
+                            </ul>
+                            <p><strong>Tổng: {orderItems.reduce((a, i) => a + i.total, 0).toLocaleString()}đ</strong></p>
+                        </div>
                     )}
                 </Modal.Body>
                 <Modal.Footer>

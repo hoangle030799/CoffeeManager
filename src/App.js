@@ -7,7 +7,6 @@ import './assets/css/responsive.css'
 import './assets/fullcalendar/core/main.css'
 import './assets/fullcalendar/daygrid/main.css'
 import './assets/fullcalendar/timegrid/main.css'
-import './assets/fullcalendar/list/main.css'
 import './assets/css/flatpickr.min.css'
 import "choices.js/public/assets/styles/choices.min.css";
 import "flatpickr/dist/flatpickr.css";
