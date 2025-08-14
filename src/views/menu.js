@@ -18,6 +18,7 @@ const Menu = () => {
     setNewDrink({ name: "", cost: "", price: "" });
     setShowAdd(false);
   };
+  // Cách tính giá bán gợi ý
   const handleSuggestPrice = () => {
     const cost = parseFloat(newDrink.cost);
     if (isNaN(cost)) return alert("Giá cost phải là số hợp lệ!");

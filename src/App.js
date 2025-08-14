@@ -17,6 +17,7 @@ import { useDispatch } from 'react-redux';
 // import state selectors
 import { setSetting } from './store/setting/actions'
 import fakeSalesLogs from "./salesLogs.json";
+import importedLogs from "./salesLogs_July2025.json";
 import { useEffect } from "react";
 
 function App(props) {
@@ -27,6 +28,18 @@ function App(props) {
     if (!existingLogs) {
       localStorage.setItem("salesLogs", JSON.stringify(fakeSalesLogs));
     }
+  }, []);
+  useEffect(() => {
+    const existingLogs = JSON.parse(localStorage.getItem("salesLogs")) || [];
+
+    const mergedLogs = [...existingLogs];
+    importedLogs.forEach((log) => {
+      if (!mergedLogs.find((item) => item.id === log.id)) {
+        mergedLogs.push(log);
+      }
+    });
+
+    localStorage.setItem("salesLogs", JSON.stringify(mergedLogs));
   }, []);
   return (
     <div className="App">

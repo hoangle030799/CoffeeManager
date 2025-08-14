@@ -90,6 +90,8 @@ const Revenue = () => {
   };
   const salesLogs = JSON.parse(localStorage.getItem("salesLogs")) || [];
 
+  const salesLogs2 = JSON.parse(localStorage.getItem("salesLogs_July2025")) || [];
+
   const selectedDateLogs = salesLogs.filter((log) => {
     const logDate = new Date(log.timestamp);
     return (
@@ -98,6 +100,7 @@ const Revenue = () => {
       logDate.getDate() === selectedDate.getDate()
     );
   });
+
   const groupBy = (array, keyFn) => {
     return array.reduce((acc, item) => {
       const key = keyFn(item);

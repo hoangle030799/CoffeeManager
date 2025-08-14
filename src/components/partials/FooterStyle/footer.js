@@ -19,7 +19,7 @@ const Footer = memo(() => {
                                     target="_blank"
                                     rel="noopener noreferrer"
                                  >
-                                    Experience Sharing
+                                    Chia sẻ kinh nghiệm
                                  </a>
                               </li>
                            </ul>
@@ -28,7 +28,7 @@ const Footer = memo(() => {
                            <ul className="list-inline mb-0">
                               <li className="list-inline-item">
                                  <a
-                                    href="https://www.facebook.com/groups/1443843489189850"
+                                    href="https://forms.gle/XNk5NTKt4nN3VHCGA"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                  >

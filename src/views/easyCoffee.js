@@ -168,7 +168,7 @@ const Home = () => {
                 </div>
               </div>
               <div className="iq-card-footer d-flex justify-content-center align-items-center">
-                <p className="dancing-script text-body">
+                <p className="dancing-script text-body ms-3">
                   Easy Coffee Manager – Khởi đầu dễ dàng trong hành trình vận hành quán cà phê của riêng bạn.
                 </p>
               </div>
