@@ -49,40 +49,31 @@ const VerticalNav = memo(() => {
         <Accordion as="ul" className="iq-menu">
           <li className="iq-menu-title">
             <i className="ri-subtract-line"></i>
-            <span>Dashboard</span>
           </li>
-          <SidebarMenu isTag="true" pathname="/" title="Doctor Dashboard">
-            <i className="ri-hospital-fill"></i>
+          <SidebarMenu isTag="true" pathname="/" title="Coffee Manager">
+            <i className="ri-cup-fill me-2"></i>
           </SidebarMenu>
 
           <SidebarMenu
             isTag="true"
-            pathname="/dashboard-1"
-            title="Hospital Dashboard 1 "
+            pathname="/menu"
+            title="Menu "
           >
-            <i className="ri-home-8-fill"></i>
+            <i className="ri-file-list-3-fill me-2"></i>
           </SidebarMenu>
           <SidebarMenu
             isTag="true"
-            pathname="/dashboard-2"
-            title="Hospital Dashboard 2"
+            pathname="/inventory"
+            title="Quản lý kho"
           >
-            <i className="ri-briefcase-4-fill"></i>
+            <i className="ri-archive-fill me-2"></i>
           </SidebarMenu>
           <SidebarMenu
             isTag="true"
-            pathname="/dashboard-3"
-            title="Patient Dashboard"
+            pathname="/revenue"
+            title="Doanh thu"
           >
-            <i className="ri-group-fill"></i>
-          </SidebarMenu>
-          <SidebarMenu
-            isTag="true"
-            pathname="/dashboard-4"
-            title="Covid-19 Dashboard"
-            isNew="true"
-          >
-            <i className="lab la-mendeley"></i>
+            <i className="ri-bar-chart-fill me-2"></i>
           </SidebarMenu>
         </Accordion>
       </nav>
